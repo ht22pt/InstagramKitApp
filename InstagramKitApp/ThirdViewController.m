@@ -41,7 +41,6 @@
     self.carousel.dataSource = self;
     self.carousel.type = iCarouselTypeLinear;
     
-    [self awakeFromNib];
 }
 
 - (void)viewDidUnload
@@ -168,20 +167,6 @@
     }
     
     return [self.searchTextField resignFirstResponder];
-}
-
-- (void)awakeFromNib
-{
-    //set up data
-    //your carousel should always be driven by an array of
-    //data of some kind - don't store data in your item views
-    //or the recycling mechanism will destroy your data once
-    //your item views move off-screen
-    self.items = [NSMutableArray array];
-    for (int j = 0; j < 10; j++)
-    {
-        [self.items addObject:@(j)];
-    }
 }
 
 #pragma mark -
