@@ -65,17 +65,6 @@
     [self.timer invalidate];
 }
 
-- (void)requestSelfRecentMedia
-{
-    [self.instagramEngine getSelfRecentMediaWithSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
-        [self.mediaArray removeAllObjects];
-        [self.mediaArray addObjectsFromArray:media];
-        [self.secondCollectionView reloadData];
-    } failure:^(NSError *error, NSInteger statusCode) {
-        NSLog(@"Load Self Media Failed");
-      }];
-}
-
 - (void)requestMediaWithTagName
 {
      [self.instagramEngine getMediaWithTagName:self.searchTextFieldContent

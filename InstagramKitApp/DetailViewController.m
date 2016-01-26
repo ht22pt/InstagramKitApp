@@ -21,6 +21,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self.showUserImagesButton setTitle:self.media.user.username forState:UIControlStateNormal];
+    
     if(self.media.standardResolutionImageURL)
         [self.imageView sd_setImageWithURL:self.media.standardResolutionImageURL];
     else
@@ -32,7 +34,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showUserImages:(id)sender {
+}
+
 - (IBAction)backNavigationItem:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end
