@@ -10,6 +10,7 @@
 #import <InstagramKit/InstagramKit.h>
 #import "CustomCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailViewController.h"
 
 @interface ThirdViewController ()
 
@@ -19,7 +20,6 @@
 @property (nonatomic, strong) NSString *searchTextFieldContent;
 @property (nonatomic, strong) NSString *instagramUserId;
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -60,10 +60,9 @@
     self.timer=[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scrollCarousel) userInfo:nil repeats:YES];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewDidDisappear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.timer invalidate];
 }
 
 - (void)requestSelfRecentMedia
@@ -235,6 +234,19 @@
     }
     
     [self.carousel scrollToItemAtIndex:newIndex duration:1];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self showDetailForIndexPath:indexPath];
+}
+
+- (void)showDetailForIndexPath:(NSIndexPath *)indexPath {
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    DetailViewController* detailController = (DetailViewController*)navController.topViewController;
+    InstagramMedia *media = self.mediaArray[indexPath.row];
+    detailController.media = media;
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 

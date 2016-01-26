@@ -19,6 +19,7 @@
 		4F808F0B1C4E3FB900C1CE99 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F808F091C4E3F8200C1CE99 /* Security.framework */; };
 		4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */; };
 		4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F541C522CB800C1CE99 /* iCarousel.m */; };
+		4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F571C56393600C1CE99 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		4F808F531C522CB800C1CE99 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		4F808F541C522CB800C1CE99 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		4F808F561C56393600C1CE99 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4F808F571C56393600C1CE99 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		68C46652874D063B17CF3F6C /* Pods-InstagramKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramKitApp/Pods-InstagramKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		C155ACCB0B31F0D97DEF4E9F /* libPods-InstagramKitApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramKitApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +114,8 @@
 				4F808EFB1C4CCBCA00C1CE99 /* LaunchScreen.storyboard */,
 				4F808F0C1C4F8BB100C1CE99 /* ThirdViewController.h */,
 				4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */,
+				4F808F561C56393600C1CE99 /* DetailViewController.h */,
+				4F808F571C56393600C1CE99 /* DetailViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				4F808EF51C4CCBCA00C1CE99 /* SecondViewController.m in Sources */,
 				4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */,
 				4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */,
+				4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */,
 				4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */,
 				4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */,
 				4F808EEC1C4CCBCA00C1CE99 /* main.m in Sources */,
