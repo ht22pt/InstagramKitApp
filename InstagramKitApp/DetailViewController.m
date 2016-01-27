@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "SelectedUserDetails.h"
 
 @interface DetailViewController ()
 
@@ -34,11 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)showUserImages:(id)sender {
-}
-
 - (IBAction)backNavigationItem:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SelectedUserDetails *selectedUserController = segue.destinationViewController;
+    selectedUserController.media = self.media;
 }
 
 @end

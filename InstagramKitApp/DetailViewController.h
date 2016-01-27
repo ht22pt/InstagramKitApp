@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) InstagramMedia *media;
 @property (weak, nonatomic) IBOutlet UIButton *showUserImagesButton;
-- (IBAction)showUserImages:(id)sender;
 - (IBAction)backNavigationItem:(id)sender;
 
 @end
