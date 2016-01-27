@@ -22,7 +22,12 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.showUserImagesButton setTitle:self.media.user.username forState:UIControlStateNormal];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"selectedUserImage"]) {
+        [self.showUserImagesButton setHidden:NO];
+        [self.showUserImagesButton setTitle:self.media.user.username forState:UIControlStateNormal];
+    }
+    else
+        [self.showUserImagesButton setHidden:YES];
     
     if(self.media.standardResolutionImageURL)
         [self.imageView sd_setImageWithURL:self.media.standardResolutionImageURL];
@@ -43,6 +48,7 @@
 {
     SelectedUserDetails *selectedUserController = segue.destinationViewController;
     selectedUserController.media = self.media;
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selectedUserImage"];
 }
 
 @end
