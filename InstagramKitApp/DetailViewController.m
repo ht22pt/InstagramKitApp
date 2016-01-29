@@ -22,6 +22,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.likeCount.text = [@(self.media.likesCount) stringValue];
+    self.commentCount.text = [@(self.media.commentCount) stringValue];
+    
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"selectedUserImage"]) {
         [self.showUserImagesButton setHidden:NO];
         [self.showUserImagesButton setTitle:self.media.user.username forState:UIControlStateNormal];
