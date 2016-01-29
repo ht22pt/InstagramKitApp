@@ -1007,34 +1007,64 @@
                                                     </mask>
                                                 </variation>
                                             </webView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ler-r9-evg">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="EPm-Xu-IkQ"/>
+                                                    <constraint firstAttribute="height" constant="21" id="xHr-LB-oVS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="EPm-Xu-IkQ"/>
+                                                        <exclude reference="xHr-LB-oVS"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="EPm-Xu-IkQ"/>
+                                                        <include reference="xHr-LB-oVS"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="yA0-Dj-KZM" firstAttribute="top" secondItem="Jk4-OF-cwE" secondAttribute="top" constant="50" id="Csi-Hu-UqK"/>
+                                            <constraint firstItem="yA0-Dj-KZM" firstAttribute="top" secondItem="Jk4-OF-cwE" secondAttribute="top" constant="50" id="9We-Vn-PR6"/>
                                             <constraint firstItem="yA0-Dj-KZM" firstAttribute="leading" secondItem="Jk4-OF-cwE" secondAttribute="leading" id="O5G-TL-jK8"/>
-                                            <constraint firstAttribute="bottom" secondItem="yA0-Dj-KZM" secondAttribute="bottom" constant="200" id="XsD-Wa-5n5"/>
+                                            <constraint firstAttribute="bottom" secondItem="yA0-Dj-KZM" secondAttribute="bottom" constant="200" id="fVI-at-ukt"/>
                                             <constraint firstItem="yA0-Dj-KZM" firstAttribute="centerX" secondItem="Jk4-OF-cwE" secondAttribute="centerX" id="lmU-YT-bI4"/>
+                                            <constraint firstItem="ler-r9-evg" firstAttribute="centerX" secondItem="Jk4-OF-cwE" secondAttribute="centerX" id="vTK-kg-ZhA"/>
+                                            <constraint firstItem="ler-r9-evg" firstAttribute="centerY" secondItem="Jk4-OF-cwE" secondAttribute="centerY" id="z2Y-HH-cPw"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="yA0-Dj-KZM"/>
+                                                <exclude reference="ler-r9-evg"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="Csi-Hu-UqK"/>
+                                                <exclude reference="9We-Vn-PR6"/>
                                                 <exclude reference="O5G-TL-jK8"/>
-                                                <exclude reference="XsD-Wa-5n5"/>
+                                                <exclude reference="fVI-at-ukt"/>
                                                 <exclude reference="lmU-YT-bI4"/>
+                                                <exclude reference="vTK-kg-ZhA"/>
+                                                <exclude reference="z2Y-HH-cPw"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="yA0-Dj-KZM"/>
+                                                <include reference="ler-r9-evg"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="Csi-Hu-UqK"/>
+                                                <include reference="9We-Vn-PR6"/>
                                                 <include reference="O5G-TL-jK8"/>
-                                                <include reference="XsD-Wa-5n5"/>
+                                                <include reference="fVI-at-ukt"/>
                                                 <include reference="lmU-YT-bI4"/>
+                                                <include reference="vTK-kg-ZhA"/>
+                                                <include reference="z2Y-HH-cPw"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1104,6 +1134,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" image="lock" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="isLoggedInLabel" destination="ler-r9-evg" id="kXS-Ai-fxq"/>
                         <outlet property="webView" destination="yA0-Dj-KZM" id="8zP-Nf-GK4"/>
                     </connections>
                 </viewController>
