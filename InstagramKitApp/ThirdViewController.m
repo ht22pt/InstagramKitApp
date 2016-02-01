@@ -37,8 +37,6 @@
     self.secondCollectionView.dataSource = self;
     self.searchTextField.delegate = self;
     
-    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.secondCollectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
 }
 
 - (void)viewDidUnload
@@ -251,6 +249,23 @@
     }
 
     return reusableview;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(20, 0, 20, 0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    int numberOfCellInRow = 3;
+    CGFloat cellWidth =  [[UIScreen mainScreen] bounds].size.width/numberOfCellInRow - 20;
+    return CGSizeMake(cellWidth, cellWidth);
 }
 
 
