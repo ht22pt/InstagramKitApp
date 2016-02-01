@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ECACD45C83D2C3923A54DF6 /* libPods-InstagramKitApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C155ACCB0B31F0D97DEF4E9F /* libPods-InstagramKitApp.a */; };
 		4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3193251C58AA2300850326 /* SelectedUserDetails.m */; };
+		4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3193291C5F442A00850326 /* HorizontalPhotosHeaderView.m */; };
 		4F808EEC1C4CCBCA00C1CE99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEB1C4CCBCA00C1CE99 /* main.m */; };
 		4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */; };
 		4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF11C4CCBCA00C1CE99 /* FirstViewController.m */; };
@@ -27,6 +28,8 @@
 		3639ECDE0D22831F614E9272 /* Pods-InstagramKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramKitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramKitApp/Pods-InstagramKitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4F3193241C58AA2300850326 /* SelectedUserDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedUserDetails.h; sourceTree = "<group>"; };
 		4F3193251C58AA2300850326 /* SelectedUserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedUserDetails.m; sourceTree = "<group>"; };
+		4F3193281C5F442A00850326 /* HorizontalPhotosHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPhotosHeaderView.h; sourceTree = "<group>"; };
+		4F3193291C5F442A00850326 /* HorizontalPhotosHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPhotosHeaderView.m; sourceTree = "<group>"; };
 		4F808EE71C4CCBCA00C1CE99 /* InstagramKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F808EEB1C4CCBCA00C1CE99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F808EED1C4CCBCA00C1CE99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3193271C5F43AA00850326 /* CollectionView Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4F3193281C5F442A00850326 /* HorizontalPhotosHeaderView.h */,
+				4F3193291C5F442A00850326 /* HorizontalPhotosHeaderView.m */,
+			);
+			name = "CollectionView Headers";
+			sourceTree = "<group>";
+		};
 		4F808EDE1C4CCBCA00C1CE99 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		4F808F071C4D146800C1CE99 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				4F3193271C5F43AA00850326 /* CollectionView Headers */,
 				4F808F081C4D149400C1CE99 /* CollectionView Cells */,
 				4F808EED1C4CCBCA00C1CE99 /* AppDelegate.h */,
 				4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */,
@@ -295,6 +308,7 @@
 				4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */,
 				4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */,
 				4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */,
+				4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */,
 				4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */,
 				4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */,
 				4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */,

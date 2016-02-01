@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSString *searchTextFieldContent;
 @property (nonatomic, strong) NSString *instagramUserId;
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) HorizontalPhotosHeaderView *headerView;
 
 @end
 
@@ -36,11 +37,8 @@
     self.secondCollectionView.dataSource = self;
     self.searchTextField.delegate = self;
     
-    //configure carousel
-    self.carousel.delegate = self;
-    self.carousel.dataSource = self;
-    self.carousel.type = iCarouselTypeLinear;
-    
+    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.secondCollectionView.collectionViewLayout;
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
 }
 
 - (void)viewDidUnload
@@ -48,7 +46,7 @@
     [super viewDidUnload];
     
     //free up memory by releasing subviews
-    self.carousel = nil;
+    self.headerView.headerCarousel = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -58,6 +56,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.timer=[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scrollCarousel) userInfo:nil repeats:YES];
+    
+    //configure carousel
+    self.headerView.headerCarousel.delegate = self;
+    self.headerView.headerCarousel.dataSource = self;
+    self.headerView.headerCarousel.type = iCarouselTypeLinear;
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -72,7 +75,7 @@
                             [self.mediaArray removeAllObjects];
                             [self.mediaArray addObjectsFromArray:media];
                             [self.secondCollectionView reloadData];
-                            [self.carousel reloadData];
+                            [self.headerView.headerCarousel reloadData];
                         }
                         failure:^(NSError *error, NSInteger statusCode) {
                             NSLog(@"Load Media With Tag Name Failed");
@@ -87,7 +90,7 @@
                                       [self.mediaArray removeAllObjects];
                                       [self.mediaArray addObjectsFromArray:media];
                                       [self.secondCollectionView reloadData];
-                                      [self.carousel reloadData];
+                                      [self.headerView.headerCarousel reloadData];
                                   }
                                       failure:^(NSError *error, NSInteger statusCode) {
                                           NSLog(@"Load Media For User Id Failed");
@@ -177,7 +180,7 @@
         //don't do anything specific to the index within
         //this `if (view == nil) {...}` statement because the view will be
         //recycled and used with other index values later
-        view = [[UIView alloc] initWithFrame:self.carousel.bounds];
+        view = [[UIView alloc] initWithFrame:self.headerView.headerCarousel.bounds];
         
         carouselImageView = [[UIImageView alloc] initWithFrame:view.bounds];
         carouselImageView.tag = 1;
@@ -217,12 +220,12 @@
 }
 
 - (void)scrollCarousel {
-    NSInteger newIndex=self.carousel.currentItemIndex+1;
-    if (newIndex > self.carousel.numberOfItems) {
+    NSInteger newIndex=self.headerView.headerCarousel.currentItemIndex+1;
+    if (newIndex > self.headerView.headerCarousel.numberOfItems) {
         newIndex=0;
     }
     
-    [self.carousel scrollToItemAtIndex:newIndex duration:1];
+    [self.headerView.headerCarousel scrollToItemAtIndex:newIndex duration:1];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -236,6 +239,18 @@
     InstagramMedia *media = self.mediaArray[indexPath.row];
     detailController.media = media;
     [self presentViewController:navController animated:YES completion:nil];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        self.headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        reusableview = self.headerView;
+    }
+
+    return reusableview;
 }
 
 
