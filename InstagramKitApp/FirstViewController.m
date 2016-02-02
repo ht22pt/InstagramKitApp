@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "DetailViewController.h"
 #import <InstagramKit/InstagramKit.h>
 #import "CustomCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -78,6 +79,36 @@
     [cell setImageUrl:media.thumbnailURL];
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self showDetailForIndexPath:indexPath];
+}
+
+- (void)showDetailForIndexPath:(NSIndexPath *)indexPath {
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    DetailViewController* detailController = (DetailViewController*)navController.topViewController;
+    InstagramMedia *media = self.mediaArray[indexPath.row];
+    detailController.media = media;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(20, 0, 20, 0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    int numberOfCellInRow = 3;
+    CGFloat cellWidth =  [[UIScreen mainScreen] bounds].size.width/numberOfCellInRow - 20;
+    return CGSizeMake(cellWidth, cellWidth);
 }
 
 - (IBAction)logOut:(id)sender {

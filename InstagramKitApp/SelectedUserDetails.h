@@ -10,7 +10,7 @@
 #import <InstagramKit/InstagramKit.h>
 #import "CustomCell.h"
 
-@interface SelectedUserDetails : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface SelectedUserDetails : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) InstagramMedia *media;
 

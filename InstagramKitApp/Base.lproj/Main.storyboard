@@ -115,7 +115,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="3"/>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="bH2-NC-KBo" secondAttribute="bottom" constant="90" id="g4N-aZ-6rv"/>
-                            <constraint firstItem="D6E-GI-Xd9" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="20" id="o2q-Gf-Ci2"/>
+                            <constraint firstItem="D6E-GI-Xd9" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="10" id="o2q-Gf-Ci2"/>
                             <constraint firstItem="vmR-I9-Inj" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="tfW-O8-85P"/>
                             <constraint firstItem="D6E-GI-Xd9" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vV5-AB-cvY"/>
                         </constraints>
@@ -832,7 +832,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="78H-dk-ygN" firstAttribute="top" secondItem="984-Qi-aaH" secondAttribute="top" constant="30" id="6zU-JZ-lqq"/>
+                            <constraint firstItem="78H-dk-ygN" firstAttribute="top" secondItem="984-Qi-aaH" secondAttribute="top" constant="20" id="6zU-JZ-lqq"/>
                             <constraint firstItem="RDe-ht-iUQ" firstAttribute="top" secondItem="78H-dk-ygN" secondAttribute="bottom" constant="20" id="BWF-N9-Wwd"/>
                             <constraint firstItem="78H-dk-ygN" firstAttribute="centerX" secondItem="984-Qi-aaH" secondAttribute="centerX" id="OBC-a2-H5H"/>
                             <constraint firstItem="78H-dk-ygN" firstAttribute="leading" secondItem="984-Qi-aaH" secondAttribute="leading" constant="20" id="yAW-Ve-8Od"/>
