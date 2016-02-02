@@ -836,7 +836,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="78H-dk-ygN" firstAttribute="top" secondItem="984-Qi-aaH" secondAttribute="top" constant="20" id="6zU-JZ-lqq"/>
+                            <constraint firstItem="78H-dk-ygN" firstAttribute="top" secondItem="984-Qi-aaH" secondAttribute="top" constant="10" id="6zU-JZ-lqq"/>
                             <constraint firstItem="RDe-ht-iUQ" firstAttribute="top" secondItem="78H-dk-ygN" secondAttribute="bottom" constant="20" id="BWF-N9-Wwd"/>
                             <constraint firstItem="78H-dk-ygN" firstAttribute="centerX" secondItem="984-Qi-aaH" secondAttribute="centerX" id="OBC-a2-H5H"/>
                             <constraint firstItem="78H-dk-ygN" firstAttribute="leading" secondItem="984-Qi-aaH" secondAttribute="leading" constant="20" id="yAW-Ve-8Od"/>
@@ -1073,6 +1073,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-jX-GLP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zXP-JO-hy8">
                                     <size key="itemSize" width="111" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1131,8 +1132,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="SUR-p2-Ifa"/>
+                                    <constraint firstAttribute="height" constant="200" id="SUR-p2-Ifa"/>
                                 </constraints>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TagCell" id="g1O-I5-LgZ" userLabel="TagCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1141,7 +1143,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-m7-b48">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-m7-b48">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1199,7 +1201,7 @@
                             <constraint firstItem="jvl-jX-GLP" firstAttribute="top" secondItem="zqN-XN-j9v" secondAttribute="bottom" constant="10" id="IcW-7K-jGg"/>
                             <constraint firstItem="ayg-Cb-LZH" firstAttribute="centerX" secondItem="ac6-Hv-gqX" secondAttribute="centerX" id="L6n-ya-MRB"/>
                             <constraint firstItem="jvl-jX-GLP" firstAttribute="centerX" secondItem="ac6-Hv-gqX" secondAttribute="centerX" id="ep0-w8-c3y"/>
-                            <constraint firstItem="heH-sm-eje" firstAttribute="top" secondItem="ayg-Cb-LZH" secondAttribute="bottom" constant="40" id="iWH-fb-CU5"/>
+                            <constraint firstItem="heH-sm-eje" firstAttribute="top" secondItem="ayg-Cb-LZH" secondAttribute="bottom" constant="10" id="iWH-fb-CU5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
