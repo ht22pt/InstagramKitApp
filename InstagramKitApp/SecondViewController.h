@@ -10,7 +10,7 @@
 
 @interface SecondViewController : UIViewController <UIWebViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *isLoggedInLabel;
 
 @end

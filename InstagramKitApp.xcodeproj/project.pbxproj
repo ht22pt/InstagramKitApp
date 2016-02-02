@@ -10,6 +10,7 @@
 		0ECACD45C83D2C3923A54DF6 /* libPods-InstagramKitApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C155ACCB0B31F0D97DEF4E9F /* libPods-InstagramKitApp.a */; };
 		4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3193251C58AA2300850326 /* SelectedUserDetails.m */; };
 		4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3193291C5F442A00850326 /* HorizontalPhotosHeaderView.m */; };
+		4F31932D1C6099A200850326 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31932C1C6099A200850326 /* TagsViewController.m */; };
 		4F808EEC1C4CCBCA00C1CE99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEB1C4CCBCA00C1CE99 /* main.m */; };
 		4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */; };
 		4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF11C4CCBCA00C1CE99 /* FirstViewController.m */; };
@@ -30,6 +31,8 @@
 		4F3193251C58AA2300850326 /* SelectedUserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedUserDetails.m; sourceTree = "<group>"; };
 		4F3193281C5F442A00850326 /* HorizontalPhotosHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPhotosHeaderView.h; sourceTree = "<group>"; };
 		4F3193291C5F442A00850326 /* HorizontalPhotosHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPhotosHeaderView.m; sourceTree = "<group>"; };
+		4F31932B1C6099A200850326 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
+		4F31932C1C6099A200850326 /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
 		4F808EE71C4CCBCA00C1CE99 /* InstagramKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F808EEB1C4CCBCA00C1CE99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F808EED1C4CCBCA00C1CE99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				4F808F571C56393600C1CE99 /* DetailViewController.m */,
 				4F3193241C58AA2300850326 /* SelectedUserDetails.h */,
 				4F3193251C58AA2300850326 /* SelectedUserDetails.m */,
+				4F31932B1C6099A200850326 /* TagsViewController.h */,
+				4F31932C1C6099A200850326 /* TagsViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			files = (
 				4F808EF51C4CCBCA00C1CE99 /* SecondViewController.m in Sources */,
 				4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */,
+				4F31932D1C6099A200850326 /* TagsViewController.m in Sources */,
 				4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */,
 				4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */,
 				4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */,
