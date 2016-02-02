@@ -22,7 +22,8 @@
 
 @implementation FirstViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.mediaArray = [[NSMutableArray alloc] init];
@@ -31,7 +32,8 @@
     self.collectionView.dataSource = self;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     
     BOOL isSessionValid = [self.instagramEngine isSessionValid];
@@ -44,10 +46,10 @@
     
     NSLog(isSessionValid ? @"Yes" : @"No");
     [self requestSelfRecentMedia];
-
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -86,7 +88,8 @@
     [self showDetailForIndexPath:indexPath];
 }
 
-- (void)showDetailForIndexPath:(NSIndexPath *)indexPath {
+- (void)showDetailForIndexPath:(NSIndexPath *)indexPath
+{
     UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
     DetailViewController* detailController = (DetailViewController*)navController.topViewController;
     InstagramMedia *media = self.mediaArray[indexPath.row];
@@ -111,10 +114,41 @@
     return CGSizeMake(cellWidth, cellWidth);
 }
 
-- (IBAction)logOut:(id)sender {
-    [self.instagramEngine logout];
-    self.isLoggedInLabel.text = @"Niezalogowany";
-    [self.mediaArray removeAllObjects];
-    [self.collectionView reloadData];
+- (IBAction)logOut:(id)sender
+{
+    NSString *other1 = @"Sign Out";
+    NSString *cancelTitle = @"Cancel";
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:nil
+                                  delegate:self
+                                  cancelButtonTitle:cancelTitle
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:other1, nil];
+    
+    [actionSheet showInView:self.view];
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //Get the name of the current pressed button
+    NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+    
+    if ([buttonTitle isEqualToString:@"Sign Out"]) {
+        [self.instagramEngine logout];
+        self.isLoggedInLabel.text = @"Niezalogowany";
+        [self.mediaArray removeAllObjects];
+        [self.collectionView reloadData];
+    }
+    if ([buttonTitle isEqualToString:@"Cancel"]) {
+        NSLog(@"Cancel pressed --> Cancel ActionSheet");
+    }
+}
+
+- (void)showActionSheet:(id)sender
+{
+    
+}
+
+
 @end
