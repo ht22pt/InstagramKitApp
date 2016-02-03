@@ -28,9 +28,12 @@
     
     self.mediaArray = [[NSMutableArray alloc] init];
     self.instagramEngine = [InstagramEngine sharedEngine];
-    self.currentPaginationInfo = nil;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    self.currentPaginationInfo = nil;
+    [self.mediaArray removeAllObjects];
+    [self requestSelfRecentMediaWithCount];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -40,20 +43,24 @@
     BOOL isSessionValid = [self.instagramEngine isSessionValid];
     if(isSessionValid) {
         self.isLoggedInLabel.text = @"";
+        self.moreButton.hidden = NO; //to do
     }
     else {
         self.isLoggedInLabel.text = @"Niezalogowany";
+        self.moreButton.hidden = YES;
+        
+        self.currentPaginationInfo = nil;
+        [self.mediaArray removeAllObjects];
+        [self requestSelfRecentMediaWithCount];
     }
     
     NSLog(isSessionValid ? @"Yes" : @"No");
-    [self requestSelfRecentMediaWithCount];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    [self.mediaArray removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,10 +87,18 @@
                                 success:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
 //                                    if(paginationInfo) {
                                         self.currentPaginationInfo = paginationInfo;
+                                        
 //                                    }
                                     
                                     [self.mediaArray addObjectsFromArray:media];
                                     [self.collectionView reloadData];
+                                    
+                                    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.mediaArray.count - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
+//                                    [self.mediaArray removeAllObjects];
+                                    if(media.count %9 != 0)
+                                        self.moreButton.hidden = YES;
+                                    
+                                    NSLog(@"AA");
                                 }
                                 failure:^(NSError *error, NSInteger serverStatusCode) {
                                     NSLog(@"Load Self Media With Count Failed");
@@ -161,7 +176,7 @@
     [actionSheet showInView:self.view];
 }
 
-- (IBAction)moreButton:(id)sender {
+- (IBAction)moreButtonClick:(id)sender {
     [self requestSelfRecentMediaWithCount];
 }
 

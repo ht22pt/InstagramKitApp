@@ -146,7 +146,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="moreButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xHL-BG-zJ4"/>
+                                    <action selector="moreButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JDg-72-O0D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -210,6 +210,7 @@
                     <connections>
                         <outlet property="collectionView" destination="D6E-GI-Xd9" id="6Mf-b0-mSi"/>
                         <outlet property="isLoggedInLabel" destination="vmR-I9-Inj" id="VI1-0L-kCm"/>
+                        <outlet property="moreButton" destination="Qda-he-Kc6" id="4oc-hp-dVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

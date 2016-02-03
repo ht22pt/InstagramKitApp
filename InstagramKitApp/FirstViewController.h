@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *isLoggedInLabel;
 - (IBAction)optionsClick:(id)sender;
-- (IBAction)moreButton:(id)sender;
+- (IBAction)moreButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 @end
 
