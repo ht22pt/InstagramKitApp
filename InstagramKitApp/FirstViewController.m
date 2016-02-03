@@ -28,6 +28,7 @@
     
     self.mediaArray = [[NSMutableArray alloc] init];
     self.instagramEngine = [InstagramEngine sharedEngine];
+    self.currentPaginationInfo = nil;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
 }
@@ -45,7 +46,14 @@
     }
     
     NSLog(isSessionValid ? @"Yes" : @"No");
-    [self requestSelfRecentMedia];
+    [self requestSelfRecentMediaWithCount];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.mediaArray removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +73,22 @@
        }];
 }
 
+- (void)requestSelfRecentMediaWithCount
+{
+    [self.instagramEngine getSelfRecentMediaWithCount:9
+                                maxId:self.currentPaginationInfo.nextMaxId
+                                success:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
+//                                    if(paginationInfo) {
+                                        self.currentPaginationInfo = paginationInfo;
+//                                    }
+                                    
+                                    [self.mediaArray addObjectsFromArray:media];
+                                    [self.collectionView reloadData];
+                                }
+                                failure:^(NSError *error, NSInteger serverStatusCode) {
+                                    NSLog(@"Load Self Media With Count Failed");
+                                }];
+}
 
 #pragma mark - UICollectionViewDataSource Methods -
 
@@ -81,6 +105,11 @@
     [cell setImageUrl:media.thumbnailURL];
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    [self requestSelfRecentMediaWithCount];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -132,6 +161,10 @@
     [actionSheet showInView:self.view];
 }
 
+- (IBAction)moreButton:(id)sender {
+    [self requestSelfRecentMediaWithCount];
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     //Get the name of the current pressed button
@@ -146,11 +179,6 @@
     if ([buttonTitle isEqualToString:@"Cancel"]) {
         NSLog(@"Cancel pressed --> Cancel ActionSheet");
     }
-}
-
-- (void)showActionSheet:(id)sender
-{
-    
 }
 
 

@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tagArray = @[@"bird", @"ball", @"road"];
+    self.tagArray = @[@"bird", @"ball", @"road", @"music"];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
