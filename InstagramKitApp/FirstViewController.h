@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *isLoggedInLabel;
-- (IBAction)logOut:(id)sender;
+- (IBAction)optionsClick:(id)sender;
 
 @end
 

@@ -98,11 +98,32 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-NC-KBo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Log out">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="TfA-MH-Qn1"/>
+                                    <constraint firstAttribute="width" constant="70" id="hmk-EO-ecN"/>
+                                </constraints>
+                                <state key="normal" title="Options">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TfA-MH-Qn1"/>
+                                        <exclude reference="hmk-EO-ecN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="TfA-MH-Qn1"/>
+                                        <include reference="hmk-EO-ecN"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="logOut:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zOs-xY-JZO"/>
+                                    <action selector="optionsClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xhh-Jm-nPH"/>
                                 </connections>
                             </button>
                         </subviews>

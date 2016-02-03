@@ -114,9 +114,12 @@
     return CGSizeMake(cellWidth, cellWidth);
 }
 
-- (IBAction)logOut:(id)sender
-{
-    NSString *other1 = @"Sign Out";
+- (IBAction)optionsClick:(id)sender {
+    NSString *other1 = @"";
+    if ([self.instagramEngine isSessionValid])
+        other1 = @"Sign Out";
+    else
+        other1 = nil;
     NSString *cancelTitle = @"Cancel";
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
