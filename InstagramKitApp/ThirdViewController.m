@@ -12,6 +12,9 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailViewController.h"
 
+#define kNumberOfCellsInARowPortrait 3
+#define kNumberOfCellsInARowLandscape 4
+
 @interface ThirdViewController ()
 
 @property (nonatomic, weak) InstagramEngine *instagramEngine;
@@ -258,14 +261,23 @@
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 10;
+    return 0;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)viewWillLayoutSubviews
 {
-    int numberOfCellInRow = 3;
-    CGFloat cellWidth =  [[UIScreen mainScreen] bounds].size.width/numberOfCellInRow - 20;
-    return CGSizeMake(cellWidth, cellWidth);
+    [super viewWillLayoutSubviews];
+    UICollectionViewFlowLayout *flowLayout = (id)self.secondCollectionView.collectionViewLayout;
+    
+    if (UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)) {
+        CGFloat cellWidth = floor((CGRectGetWidth(self.secondCollectionView.bounds)-5) / kNumberOfCellsInARowLandscape);
+        flowLayout.itemSize = CGSizeMake(cellWidth, cellWidth);
+    } else {
+        CGFloat cellWidth = floor((CGRectGetWidth(self.secondCollectionView.bounds)-5) / kNumberOfCellsInARowPortrait);
+        flowLayout.itemSize = CGSizeMake(cellWidth, cellWidth);
+    }
+    
+    [flowLayout invalidateLayout]; //force the elements to get laid out again with the new size
 }
 
 
