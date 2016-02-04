@@ -32,8 +32,11 @@
     self.collectionView.dataSource = self;
     
     self.currentPaginationInfo = nil;
-    [self.mediaArray removeAllObjects];
-    [self requestSelfRecentMediaWithCount];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(userAuthenticationChanged:)
+                                                 name:InstagramKitUserAuthenticationChangedNotification
+                                               object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -43,30 +46,12 @@
     BOOL isSessionValid = [self.instagramEngine isSessionValid];
     if(isSessionValid) {
         self.isLoggedInLabel.text = @"";
-        self.moreButton.hidden = NO; //to do
     }
     else {
         self.isLoggedInLabel.text = @"Niezalogowany";
-        self.moreButton.hidden = YES;
-        
-        self.currentPaginationInfo = nil;
-        [self.mediaArray removeAllObjects];
-        [self requestSelfRecentMediaWithCount];
     }
     
     NSLog(isSessionValid ? @"Yes" : @"No");
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)requestSelfRecentMedia
@@ -85,20 +70,18 @@
     [self.instagramEngine getSelfRecentMediaWithCount:9
                                 maxId:self.currentPaginationInfo.nextMaxId
                                 success:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
-//                                    if(paginationInfo) {
-                                        self.currentPaginationInfo = paginationInfo;
-                                        
-//                                    }
+                                    self.currentPaginationInfo = paginationInfo;
                                     
                                     [self.mediaArray addObjectsFromArray:media];
                                     [self.collectionView reloadData];
                                     
                                     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.mediaArray.count - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
-//                                    [self.mediaArray removeAllObjects];
-                                    if(media.count %9 != 0)
+
+                                    if(paginationInfo)
+                                        self.moreButton.hidden = NO;
+                                    else
                                         self.moreButton.hidden = YES;
                                     
-                                    NSLog(@"AA");
                                 }
                                 failure:^(NSError *error, NSInteger serverStatusCode) {
                                     NSLog(@"Load Self Media With Count Failed");
@@ -120,11 +103,6 @@
     [cell setImageUrl:media.thumbnailURL];
 
     return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
-{
-//    [self requestSelfRecentMediaWithCount];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -196,5 +174,12 @@
     }
 }
 
+- (void)userAuthenticationChanged:(NSNotification *)notification
+{
+    BOOL isSessionValid = [self.instagramEngine isSessionValid];
+    if(isSessionValid) {
+        [self requestSelfRecentMediaWithCount];
+    }
+}
 
 @end
