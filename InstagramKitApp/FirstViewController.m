@@ -108,7 +108,7 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(20, 0, 20, 0);
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
@@ -147,7 +147,8 @@
                                   destructiveButtonTitle:nil
                                   otherButtonTitles:other1, nil];
     
-    [actionSheet showInView:self.view];
+    [actionSheet showInView:self.parentViewController.view];
+//    [actionSheet showInView:[UIApplication sharedApplication].keyWindow];
 }
 
 - (IBAction)moreButtonClick:(id)sender {
