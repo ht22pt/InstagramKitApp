@@ -12,6 +12,10 @@
 #import "CustomCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#define kNumberOfCellsInARowPortrait 3
+#define kNumberOfCellsInARowLandscape 4
+#define kFetchItemsCount 9
+
 @interface FirstViewController ()
 
 @property (nonatomic, weak) InstagramEngine *instagramEngine;
@@ -31,27 +35,10 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
-    self.currentPaginationInfo = nil;
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(userAuthenticationChanged:)
                                                  name:InstagramKitUserAuthenticationChangedNotification
                                                object:nil];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    BOOL isSessionValid = [self.instagramEngine isSessionValid];
-    if(isSessionValid) {
-        self.isLoggedInLabel.text = @"";
-    }
-    else {
-        self.isLoggedInLabel.text = @"Niezalogowany";
-    }
-    
-    NSLog(isSessionValid ? @"Yes" : @"No");
 }
 
 - (void)requestSelfRecentMedia
@@ -67,7 +54,7 @@
 
 - (void)requestSelfRecentMediaWithCount
 {
-    [self.instagramEngine getSelfRecentMediaWithCount:9
+    [self.instagramEngine getSelfRecentMediaWithCount:kFetchItemsCount
                                 maxId:self.currentPaginationInfo.nextMaxId
                                 success:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
                                     self.currentPaginationInfo = paginationInfo;
@@ -126,14 +113,23 @@
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 10;
+    return 0;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)viewWillLayoutSubviews
 {
-    int numberOfCellInRow = 3;
-    CGFloat cellWidth =  [[UIScreen mainScreen] bounds].size.width/numberOfCellInRow - 20;
-    return CGSizeMake(cellWidth, cellWidth);
+    [super viewWillLayoutSubviews];
+    UICollectionViewFlowLayout *flowLayout = (id)self.collectionView.collectionViewLayout;
+    
+    if (UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)) {
+        CGFloat cellWidth = floor((CGRectGetWidth(self.collectionView.bounds)-5) / kNumberOfCellsInARowLandscape);
+        flowLayout.itemSize = CGSizeMake(cellWidth, cellWidth);
+    } else {
+        CGFloat cellWidth = floor((CGRectGetWidth(self.collectionView.bounds)-5) / kNumberOfCellsInARowPortrait);
+        flowLayout.itemSize = CGSizeMake(cellWidth, cellWidth);
+    }
+    
+    [flowLayout invalidateLayout]; //force the elements to get laid out again with the new size
 }
 
 - (IBAction)optionsClick:(id)sender {
@@ -176,9 +172,16 @@
 
 - (void)userAuthenticationChanged:(NSNotification *)notification
 {
+    self.currentPaginationInfo = nil;
+    
     BOOL isSessionValid = [self.instagramEngine isSessionValid];
+    
     if(isSessionValid) {
+        self.isLoggedInLabel.text = @"";
         [self requestSelfRecentMediaWithCount];
+    }
+    else {
+        self.isLoggedInLabel.text = @"Niezalogowany";
     }
 }
 
