@@ -73,6 +73,8 @@
         webView.hidden = YES;
         [SVProgressHUD dismiss];
         self.isLoggedInLabel.text = @"Zalogowany";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Zalogowałeś się." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
         return NO;
     }
     

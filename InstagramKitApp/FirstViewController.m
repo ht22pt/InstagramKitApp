@@ -165,7 +165,7 @@
         [self.mediaArray removeAllObjects];
         [self.collectionView reloadData];
         self.moreButton.hidden = YES;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Wylogowałeś się." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Wylogowałeś się." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
     }
     if ([buttonTitle isEqualToString:@"Cancel"]) {
