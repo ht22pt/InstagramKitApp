@@ -47,11 +47,30 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)saveImageButton:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download" message:@"Are you sure you want to save this image?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SelectedUserDetails *selectedUserController = segue.destinationViewController;
     selectedUserController.media = self.media;
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selectedUserImage"];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0){
+        //do nothing
+    }
+    else if(buttonIndex ==1) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //id completionTarget, SEL completionSelector and void *contextInfo if you want to be notified when the UIImage is done saving
+            UIImageWriteToSavedPhotosAlbum(self.imageView.image, nil, nil, nil);
+        });
+
+    }
 }
 
 @end

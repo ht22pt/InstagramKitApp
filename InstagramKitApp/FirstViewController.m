@@ -25,6 +25,9 @@
 @end
 
 @implementation FirstViewController
+{
+    UIActivityIndicatorView *indicator;
+}
 
 - (void)viewDidLoad
 {
@@ -34,6 +37,13 @@
     self.instagramEngine = [InstagramEngine sharedEngine];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    indicator.transform = CGAffineTransformMakeScale(2.50, 2.50);
+    indicator.center = self.view.center;
+    [self.view addSubview:indicator];
+    [indicator bringSubviewToFront:self.view];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(userAuthenticationChanged:)
@@ -57,6 +67,11 @@
     [self.instagramEngine getSelfRecentMediaWithCount:kFetchItemsCount
                                 maxId:self.currentPaginationInfo.nextMaxId
                                 success:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
+                                    if([indicator isAnimating]) {
+                                        [indicator stopAnimating];
+                                        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+                                    }
+                                    
                                     self.currentPaginationInfo = paginationInfo;
                                     
                                     [self.mediaArray addObjectsFromArray:media];
@@ -151,6 +166,8 @@
 }
 
 - (IBAction)moreButtonClick:(id)sender {
+    [indicator startAnimating];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [self requestSelfRecentMediaWithCount];
 }
 
@@ -186,6 +203,11 @@
     else {
         self.isLoggedInLabel.text = @"Niezalogowany";
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

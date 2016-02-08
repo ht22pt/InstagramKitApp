@@ -744,14 +744,37 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4o5-PN-ST5" userLabel="Save Image Button">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="270" id="QGU-5f-8Sb"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="QGU-5f-8Sb"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="QGU-5f-8Sb"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="saveImageButton:" destination="qdy-qG-Hjz" eventType="touchUpInside" id="pon-eC-bZI"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="c2n-bF-IPI" firstAttribute="top" secondItem="XgA-4n-Oid" secondAttribute="top" constant="10" id="14V-Vm-V7p"/>
                                             <constraint firstAttribute="trailing" secondItem="c2n-bF-IPI" secondAttribute="trailing" constant="20" id="8Fe-MZ-GNp"/>
                                             <constraint firstItem="cES-U9-kie" firstAttribute="top" secondItem="c2n-bF-IPI" secondAttribute="bottom" constant="10" id="9fJ-md-kDi"/>
+                                            <constraint firstAttribute="trailing" secondItem="4o5-PN-ST5" secondAttribute="trailing" constant="20" id="CHX-XB-IsB"/>
+                                            <constraint firstItem="4o5-PN-ST5" firstAttribute="top" secondItem="XgA-4n-Oid" secondAttribute="top" constant="10" id="J2d-D0-zlX"/>
+                                            <constraint firstItem="cES-U9-kie" firstAttribute="top" secondItem="4o5-PN-ST5" secondAttribute="bottom" constant="10" id="OkJ-hz-HdV"/>
                                             <constraint firstItem="cES-U9-kie" firstAttribute="leading" secondItem="XgA-4n-Oid" secondAttribute="leading" constant="20" id="VWQ-L4-jJC"/>
                                             <constraint firstItem="cES-U9-kie" firstAttribute="centerX" secondItem="XgA-4n-Oid" secondAttribute="centerX" id="n92-RV-LuP"/>
+                                            <constraint firstItem="4o5-PN-ST5" firstAttribute="leading" secondItem="XgA-4n-Oid" secondAttribute="leading" constant="20" id="nDr-ef-beX"/>
                                             <constraint firstAttribute="bottom" secondItem="cES-U9-kie" secondAttribute="bottom" constant="13" id="nnL-VA-RpQ"/>
                                             <constraint firstItem="c2n-bF-IPI" firstAttribute="leading" secondItem="XgA-4n-Oid" secondAttribute="leading" constant="20" id="pQF-1z-SdN"/>
                                         </constraints>
@@ -759,12 +782,17 @@
                                             <mask key="subviews">
                                                 <exclude reference="c2n-bF-IPI"/>
                                                 <exclude reference="cES-U9-kie"/>
+                                                <exclude reference="4o5-PN-ST5"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="14V-Vm-V7p"/>
                                                 <exclude reference="8Fe-MZ-GNp"/>
                                                 <exclude reference="pQF-1z-SdN"/>
+                                                <exclude reference="CHX-XB-IsB"/>
+                                                <exclude reference="J2d-D0-zlX"/>
+                                                <exclude reference="nDr-ef-beX"/>
                                                 <exclude reference="9fJ-md-kDi"/>
+                                                <exclude reference="OkJ-hz-HdV"/>
                                                 <exclude reference="VWQ-L4-jJC"/>
                                                 <exclude reference="n92-RV-LuP"/>
                                                 <exclude reference="nnL-VA-RpQ"/>
@@ -789,12 +817,17 @@
                                             <mask key="subviews">
                                                 <include reference="c2n-bF-IPI"/>
                                                 <include reference="cES-U9-kie"/>
+                                                <include reference="4o5-PN-ST5"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="14V-Vm-V7p"/>
                                                 <include reference="8Fe-MZ-GNp"/>
                                                 <include reference="pQF-1z-SdN"/>
+                                                <include reference="CHX-XB-IsB"/>
+                                                <include reference="J2d-D0-zlX"/>
+                                                <include reference="nDr-ef-beX"/>
                                                 <include reference="9fJ-md-kDi"/>
+                                                <include reference="OkJ-hz-HdV"/>
                                                 <include reference="VWQ-L4-jJC"/>
                                                 <include reference="n92-RV-LuP"/>
                                                 <include reference="nnL-VA-RpQ"/>
