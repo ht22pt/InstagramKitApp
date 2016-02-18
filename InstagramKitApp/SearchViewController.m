@@ -1,12 +1,12 @@
 //
-//  ThirdViewController.m
+//  SearchViewController.m
 //  InstagramKitApp
 //
 //  Created by Kamil Waszkiewicz on 20.01.2016.
 //  Copyright © 2016 Kamil Waszkiewicz. All rights reserved.
 //
 
-#import "ThirdViewController.h"
+#import "SearchViewController.h"
 #import <InstagramKit/InstagramKit.h>
 #import "CustomCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -15,7 +15,7 @@
 #define kNumberOfCellsInARowPortrait 3
 #define kNumberOfCellsInARowLandscape 4
 
-@interface ThirdViewController ()
+@interface SearchViewController ()
 
 @property (nonatomic, weak) InstagramEngine *instagramEngine;
 @property (nonatomic, strong) InstagramPaginationInfo *currentPaginationInfo;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation ThirdViewController
+@implementation SearchViewController
 
 
 - (void)viewDidLoad

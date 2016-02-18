@@ -1,12 +1,12 @@
 //
-//  FirstViewController.m
+//  HomeViewController.m
 //  InstagramKitApp
 //
 //  Created by Kamil Waszkiewicz on 18.01.2016.
 //  Copyright © 2016 Kamil Waszkiewicz. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "HomeViewController.h"
 #import "DetailViewController.h"
 #import <InstagramKit/InstagramKit.h>
 #import "CustomCell.h"
@@ -16,7 +16,7 @@
 #define kNumberOfCellsInARowLandscape 4
 #define kFetchItemsCount 9
 
-@interface FirstViewController ()
+@interface HomeViewController ()
 
 @property (nonatomic, weak) InstagramEngine *instagramEngine;
 @property (nonatomic, strong) InstagramPaginationInfo *currentPaginationInfo;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation FirstViewController
+@implementation HomeViewController
 {
     UIActivityIndicatorView *indicator;
 }

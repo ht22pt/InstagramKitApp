@@ -1,20 +1,20 @@
 //
-//  SecondViewController.m
+//  LoginViewController.m
 //  InstagramKitApp
 //
 //  Created by Kamil Waszkiewicz on 18.01.2016.
 //  Copyright © 2016 Kamil Waszkiewicz. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "LoginViewController.h"
 #import <InstagramKit/InstagramKit.h>
 
 
-@interface SecondViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation LoginViewController
 {
     InstagramEngine *instagramEngine;
     UIActivityIndicatorView *indicator;
@@ -53,27 +53,13 @@
 #pragma mark UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-//    if (navigationType == UIWebViewNavigationTypeFormSubmitted) {
-//        NSLog(@"Form submitted");
-//        if(![[UIApplication sharedApplication] isIgnoringInteractionEvents])
-//            [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-//    }
-    
     NSError *error;
     if ([instagramEngine receivedValidAccessTokenFromURL:request.URL error:&error]) {
-//        if([[UIApplication sharedApplication] isIgnoringInteractionEvents])
-//            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-//        NSLog(@"received valid");
-//        [webView removeFromSuperview];
         webView.hidden = YES;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Zalogowałeś się." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         return NO;
     }
-    
-//    else if([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
-//            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-//    }
     
     return YES;
 }

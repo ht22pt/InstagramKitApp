@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.h
+//  SearchViewController.h
 //  InstagramKitApp
 //
 //  Created by Kamil Waszkiewicz on 20.01.2016.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel/iCarousel.h"
 #import "HorizontalPhotosHeaderView.h"
-@interface ThirdViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, iCarouselDataSource, iCarouselDelegate>
+@interface SearchViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, iCarouselDataSource, iCarouselDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;

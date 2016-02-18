@@ -13,14 +13,14 @@
 		4F31932D1C6099A200850326 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31932C1C6099A200850326 /* TagsViewController.m */; };
 		4F808EEC1C4CCBCA00C1CE99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEB1C4CCBCA00C1CE99 /* main.m */; };
 		4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */; };
-		4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF11C4CCBCA00C1CE99 /* FirstViewController.m */; };
-		4F808EF51C4CCBCA00C1CE99 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF41C4CCBCA00C1CE99 /* SecondViewController.m */; };
+		4F808EF21C4CCBCA00C1CE99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF11C4CCBCA00C1CE99 /* HomeViewController.m */; };
+		4F808EF51C4CCBCA00C1CE99 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808EF41C4CCBCA00C1CE99 /* LoginViewController.m */; };
 		4F808EF81C4CCBCA00C1CE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F808EF61C4CCBCA00C1CE99 /* Main.storyboard */; };
 		4F808EFA1C4CCBCA00C1CE99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F808EF91C4CCBCA00C1CE99 /* Assets.xcassets */; };
 		4F808EFD1C4CCBCA00C1CE99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F808EFB1C4CCBCA00C1CE99 /* LaunchScreen.storyboard */; };
 		4F808F061C4D144000C1CE99 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F051C4D144000C1CE99 /* CustomCell.m */; };
 		4F808F0B1C4E3FB900C1CE99 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F808F091C4E3F8200C1CE99 /* Security.framework */; };
-		4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */; };
+		4F808F0E1C4F8BB100C1CE99 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F0D1C4F8BB100C1CE99 /* SearchViewController.m */; };
 		4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F571C56393600C1CE99 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +36,10 @@
 		4F808EEB1C4CCBCA00C1CE99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F808EED1C4CCBCA00C1CE99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F808EF01C4CCBCA00C1CE99 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		4F808EF11C4CCBCA00C1CE99 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4F808EF31C4CCBCA00C1CE99 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		4F808EF41C4CCBCA00C1CE99 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4F808EF01C4CCBCA00C1CE99 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		4F808EF11C4CCBCA00C1CE99 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		4F808EF31C4CCBCA00C1CE99 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4F808EF41C4CCBCA00C1CE99 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4F808EF71C4CCBCA00C1CE99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F808EF91C4CCBCA00C1CE99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F808EFC1C4CCBCA00C1CE99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,8 +47,8 @@
 		4F808F041C4D144000C1CE99 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		4F808F051C4D144000C1CE99 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		4F808F091C4E3F8200C1CE99 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4F808F0C1C4F8BB100C1CE99 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
-		4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		4F808F0C1C4F8BB100C1CE99 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		4F808F0D1C4F8BB100C1CE99 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		4F808F561C56393600C1CE99 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		4F808F571C56393600C1CE99 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		68C46652874D063B17CF3F6C /* Pods-InstagramKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramKitApp/Pods-InstagramKitApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,14 +121,14 @@
 				4F808F081C4D149400C1CE99 /* CollectionView Cells */,
 				4F808EED1C4CCBCA00C1CE99 /* AppDelegate.h */,
 				4F808EEE1C4CCBCA00C1CE99 /* AppDelegate.m */,
-				4F808EF01C4CCBCA00C1CE99 /* FirstViewController.h */,
-				4F808EF11C4CCBCA00C1CE99 /* FirstViewController.m */,
-				4F808EF31C4CCBCA00C1CE99 /* SecondViewController.h */,
-				4F808EF41C4CCBCA00C1CE99 /* SecondViewController.m */,
+				4F808EF01C4CCBCA00C1CE99 /* HomeViewController.h */,
+				4F808EF11C4CCBCA00C1CE99 /* HomeViewController.m */,
+				4F808EF31C4CCBCA00C1CE99 /* LoginViewController.h */,
+				4F808EF41C4CCBCA00C1CE99 /* LoginViewController.m */,
 				4F808EF61C4CCBCA00C1CE99 /* Main.storyboard */,
 				4F808EFB1C4CCBCA00C1CE99 /* LaunchScreen.storyboard */,
-				4F808F0C1C4F8BB100C1CE99 /* ThirdViewController.h */,
-				4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */,
+				4F808F0C1C4F8BB100C1CE99 /* SearchViewController.h */,
+				4F808F0D1C4F8BB100C1CE99 /* SearchViewController.m */,
 				4F808F561C56393600C1CE99 /* DetailViewController.h */,
 				4F808F571C56393600C1CE99 /* DetailViewController.m */,
 				4F3193241C58AA2300850326 /* SelectedUserDetails.h */,
@@ -288,14 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F808EF51C4CCBCA00C1CE99 /* SecondViewController.m in Sources */,
+				4F808EF51C4CCBCA00C1CE99 /* LoginViewController.m in Sources */,
 				4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */,
 				4F31932D1C6099A200850326 /* TagsViewController.m in Sources */,
 				4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */,
 				4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */,
 				4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */,
-				4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */,
-				4F808EF21C4CCBCA00C1CE99 /* FirstViewController.m in Sources */,
+				4F808F0E1C4F8BB100C1CE99 /* SearchViewController.m in Sources */,
+				4F808EF21C4CCBCA00C1CE99 /* HomeViewController.m in Sources */,
 				4F808EEC1C4CCBCA00C1CE99 /* main.m in Sources */,
 				4F808F061C4D144000C1CE99 /* CustomCell.m in Sources */,
 			);

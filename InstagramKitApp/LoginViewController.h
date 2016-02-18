@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  LoginViewController.h
 //  InstagramKitApp
 //
 //  Created by Kamil Waszkiewicz on 18.01.2016.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController <UIWebViewDelegate>
+@interface LoginViewController : UIViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *isLoggedInLabel;
