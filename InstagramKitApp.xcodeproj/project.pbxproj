@@ -22,6 +22,7 @@
 		4FF497901C75F62B002F402F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF497851C75F62B002F402F /* SearchViewController.m */; };
 		4FF497911C75F62B002F402F /* SelectedUserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF497871C75F62B002F402F /* SelectedUserDetails.m */; };
 		4FF497921C75F62B002F402F /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF497891C75F62B002F402F /* TagsViewController.m */; };
+		4FF497971C75F9F0002F402F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FF497991C75F9F0002F402F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,10 @@
 		4FF497871C75F62B002F402F /* SelectedUserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedUserDetails.m; sourceTree = "<group>"; };
 		4FF497881C75F62B002F402F /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
 		4FF497891C75F62B002F402F /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
+		4FF497951C75F9DA002F402F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		4FF497961C75F9DA002F402F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4FF497981C75F9F0002F402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FF4979A1C75FC3A002F402F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		68C46652874D063B17CF3F6C /* Pods-InstagramKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramKitApp/Pods-InstagramKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		C155ACCB0B31F0D97DEF4E9F /* libPods-InstagramKitApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramKitApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +98,7 @@
 				4F808EF91C4CCBCA00C1CE99 /* Assets.xcassets */,
 				4F808EFE1C4CCBCA00C1CE99 /* Info.plist */,
 				4F808EEA1C4CCBCA00C1CE99 /* Supporting Files */,
+				4FF497991C75F9F0002F402F /* Localizable.strings */,
 			);
 			path = InstagramKitApp;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 4F808EDE1C4CCBCA00C1CE99;
 			productRefGroup = 4F808EE81C4CCBCA00C1CE99 /* Products */;
@@ -228,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F808EFD1C4CCBCA00C1CE99 /* LaunchScreen.storyboard in Resources */,
+				4FF497971C75F9F0002F402F /* Localizable.strings in Resources */,
 				4F808EFA1C4CCBCA00C1CE99 /* Assets.xcassets in Resources */,
 				4F808EF81C4CCBCA00C1CE99 /* Main.storyboard in Resources */,
 			);
@@ -308,6 +316,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F808EF71C4CCBCA00C1CE99 /* Base */,
+				4FF497951C75F9DA002F402F /* pl */,
 			);
 			name = Main.storyboard;
 			path = ..;
@@ -317,9 +326,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F808EFC1C4CCBCA00C1CE99 /* Base */,
+				4FF497961C75F9DA002F402F /* pl */,
 			);
 			name = LaunchScreen.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4FF497991C75F9F0002F402F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF497981C75F9F0002F402F /* en */,
+				4FF4979A1C75FC3A002F402F /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

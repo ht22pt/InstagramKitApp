@@ -1,0 +1,39 @@
+
+/* Class = "UITabBarItem"; title = "Tags"; ObjectID = "1FR-oa-cPP"; */
+"1FR-oa-cPP.title" = "Tagi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "E7k-1X-zcy"; */
+"E7k-1X-zcy.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hym-xd-vNA"; */
+"Hym-xd-vNA.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "K6u-dA-KVJ"; */
+"K6u-dA-KVJ.title" = "Szukaj";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Orh-kC-LEI"; */
+"Orh-kC-LEI.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "More"; ObjectID = "Qda-he-Kc6"; */
+"Qda-he-Kc6.normalTitle" = "Więcej";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Qz9-oY-bMv"; */
+"Qz9-oY-bMv.title" = "Wstecz";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Moja strona";
+
+/* Class = "UISegmentedControl"; ahX-jc-vip.segmentTitles[0] = "Tags"; ObjectID = "ahX-jc-vip"; */
+"ahX-jc-vip.segmentTitles[0]" = "Tagi";
+
+/* Class = "UISegmentedControl"; ahX-jc-vip.segmentTitles[1] = "Users"; ObjectID = "ahX-jc-vip"; */
+"ahX-jc-vip.segmentTitles[1]" = "Użytkownicy";
+
+/* Class = "UIButton"; normalTitle = "Options"; ObjectID = "bH2-NC-KBo"; */
+"bH2-NC-KBo.normalTitle" = "Opcje";
+
+/* Class = "UITabBarItem"; title = "Login"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Logowanie";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "qdy-qG-Hjz"; */
+"qdy-qG-Hjz.title" = "Detail";

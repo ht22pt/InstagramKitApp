@@ -56,7 +56,7 @@
     NSError *error;
     if ([instagramEngine receivedValidAccessTokenFromURL:request.URL error:&error]) {
         webView.hidden = YES;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Zalogowałeś się." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"You have logged in.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok", nil) otherButtonTitles:nil, nil];
         [alert show];
         return NO;
     }
@@ -78,7 +78,7 @@
     BOOL isSessionValid = [instagramEngine isSessionValid];
     
     if(isSessionValid) {
-        self.isLoggedInLabel.text = @"Zalogowany";
+        self.isLoggedInLabel.text = NSLocalizedString(@"Logged in", nil);
         [indicator stopAnimating];
     }
     else {

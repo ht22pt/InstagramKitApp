@@ -178,11 +178,11 @@
     
     if ([buttonTitle isEqualToString:@"Sign Out"]) {
         [self.instagramEngine logout];
-        self.isLoggedInLabel.text = @"Niezalogowany";
+        self.isLoggedInLabel.text = NSLocalizedString(@"Not logged in.", nil);
         [self.mediaArray removeAllObjects];
         [self.collectionView reloadData];
         self.moreButton.hidden = YES;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Wylogowałeś się." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"You have logged out.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok", nil) otherButtonTitles:nil, nil];
         [alert show];
     }
     if ([buttonTitle isEqualToString:@"Cancel"]) {
@@ -201,7 +201,7 @@
         [self requestSelfRecentMediaWithCount];
     }
     else {
-        self.isLoggedInLabel.text = @"Niezalogowany";
+        self.isLoggedInLabel.text = NSLocalizedString(@"Not logged in.", nil);
     }
 }
 

@@ -48,7 +48,7 @@
 }
 
 - (IBAction)saveImageButton:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download" message:@"Are you sure you want to save this image?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Download", nil) message:NSLocalizedString(@"Are you sure you want to save this image?", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"No", nil) otherButtonTitles:NSLocalizedString(@"Yes", nil), nil];
     [alert show];
 }
 

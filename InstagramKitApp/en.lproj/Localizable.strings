@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  InstagramKitApp
+
+  Created by Kamil Waszkiewicz on 18.02.2016.
+  Copyright © 2016 Kamil Waszkiewicz. All rights reserved.
+*/
+
+"Not logged in." = "Not logged in.";
+"You have logged out." = "You have logged out.";
+"Ok" = "Ok";
+"Download" = "Download";
+"Are you sure you want to save this image?" = "Are you sure you want to save this image?";
+"No" = "No";
+"Yes" = "Yes";
+"You have logged in." = "You have logged in.";
+"Logged in" = "Logged in";
