@@ -8,6 +8,7 @@ target 'InstagramKitApp' do
 pod 'InstagramKit', '~> 3.0'
 pod 'SDWebImage', '~>3.7'
 pod 'SVProgressHUD'
+pod 'iCarousel'
 
 end
 

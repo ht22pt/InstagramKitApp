@@ -21,7 +21,6 @@
 		4F808F061C4D144000C1CE99 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F051C4D144000C1CE99 /* CustomCell.m */; };
 		4F808F0B1C4E3FB900C1CE99 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F808F091C4E3F8200C1CE99 /* Security.framework */; };
 		4F808F0E1C4F8BB100C1CE99 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */; };
-		4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F541C522CB800C1CE99 /* iCarousel.m */; };
 		4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F808F571C56393600C1CE99 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +49,6 @@
 		4F808F091C4E3F8200C1CE99 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4F808F0C1C4F8BB100C1CE99 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		4F808F0D1C4F8BB100C1CE99 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		4F808F531C522CB800C1CE99 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		4F808F541C522CB800C1CE99 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		4F808F561C56393600C1CE99 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		4F808F571C56393600C1CE99 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		68C46652874D063B17CF3F6C /* Pods-InstagramKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramKitApp/Pods-InstagramKitApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		4F808EE91C4CCBCA00C1CE99 /* InstagramKitApp */ = {
 			isa = PBXGroup;
 			children = (
-				4F808F0F1C522BC100C1CE99 /* Helpers */,
 				4F808F071C4D146800C1CE99 /* GUI */,
 				4F808EF91C4CCBCA00C1CE99 /* Assets.xcassets */,
 				4F808EFE1C4CCBCA00C1CE99 /* Info.plist */,
@@ -150,23 +146,6 @@
 				4F808F051C4D144000C1CE99 /* CustomCell.m */,
 			);
 			name = "CollectionView Cells";
-			sourceTree = "<group>";
-		};
-		4F808F0F1C522BC100C1CE99 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4F808F521C522CB800C1CE99 /* iCarousel */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		4F808F521C522CB800C1CE99 /* iCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				4F808F531C522CB800C1CE99 /* iCarousel.h */,
-				4F808F541C522CB800C1CE99 /* iCarousel.m */,
-			);
-			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		6C19E82F5FF8432EFBCC4F06 /* Pods */ = {
@@ -312,7 +291,6 @@
 				4F808EF51C4CCBCA00C1CE99 /* SecondViewController.m in Sources */,
 				4F808EEF1C4CCBCA00C1CE99 /* AppDelegate.m in Sources */,
 				4F31932D1C6099A200850326 /* TagsViewController.m in Sources */,
-				4F808F551C522CB800C1CE99 /* iCarousel.m in Sources */,
 				4F3193261C58AA2300850326 /* SelectedUserDetails.m in Sources */,
 				4F31932A1C5F442A00850326 /* HorizontalPhotosHeaderView.m in Sources */,
 				4F808F581C56393600C1CE99 /* DetailViewController.m in Sources */,
